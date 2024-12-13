@@ -132,7 +132,7 @@ INSTALLED_APPS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'  # Directory for `collectstatic` (used in production)
 STATICFILES_DIRS = [BASE_DIR / "polls/static"]  # Additional static files director
-
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static\js', 'serviceworker.js')
 # PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
 
 
@@ -167,6 +167,6 @@ PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'es-MX'
 
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static\js', 'serviceworker.js')
+
 
 # PWA_SERVICE_WORKER_PATH ='static/pwa/sw.js'
