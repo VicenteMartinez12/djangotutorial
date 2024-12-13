@@ -64,6 +64,13 @@ from django.test import TestCase
 # # def vote(request, question_id):
 # #     return HttpResponse("You're voting on question %s." % question_id)
 
+
+from django.http import HttpResponse
+from django.views.generic import View
+
+
+def service_worker(request):
+    return HttpResponse(open('static/service-worker.js').read(), content_type='application/javascript')
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"

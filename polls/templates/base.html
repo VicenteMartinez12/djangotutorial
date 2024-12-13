@@ -1,0 +1,49 @@
+{% load static %}
+{% load pwa %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="/static/manifest.json">
+    <title>{% block title %}Mi Sitihkgkjjgo{% endblock %}</title>
+   
+    <!-- Otros elementos como enlaces a CSS -->
+
+    {% comment %} <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { 
+                navigator.serviceWorker.register("%/static/js/serviceworker.js%")
+                    .then(function(registration) {
+                        console.log('ServiceWorker registrado con éxito:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.error('Error al registrar el ServiceWorker:', error);
+                    });
+            });
+        }
+        
+    </script> {% endcomment %}
+
+    {% progressive_web_app_meta %}
+</head>
+<body>
+    <header>
+        <!-- Contenido del encabezado -->
+    </header>
+    <main>
+        {% block content %}
+        <!-- Contenido específico de cada página -->
+
+        
+    
+        {% endblock %}
+    </main>
+    <footer>
+        <!-- Contenido del pie de página -->
+    </footer>
+    <!-- Scripts JavaScript -->
+
+
+    
+   
+</body>
+</html>
